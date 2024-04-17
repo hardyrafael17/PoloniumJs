@@ -1,21 +1,22 @@
 {
-    "KPlugin": {
-        "Name": "PoloniumJs",
-        "Description": "Rebuild of PoloniumJs, Tiling Kwin Script",
-        "Icon": "preferences-system-windows",
-        
-        "Authors": [
-            {
-                "Email": "hardy.rafael17@gmail.com",
-                "Name": "Hardy Jimenez"
-            }
-        ],
-        "Id": "myscript",
-        "Version": "1.0",
-        "License": "GPLv3",
-        "Website": "https://github.com/username/myscript"
-    },
-    "X-Plasma-API": "javascript",
-    "X-Plasma-MainScript": "code/main.js",
-    "KPackageStructure": "KWin/Script"
+  "KPackageStructure": "KWin/Script",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "hardy.rafael17@gmail.com",
+        "Name": "Hardy Jimenez"
+      }
+    ],
+    "Description": "Rebuild of Polonium, to only use JS, Tiling Kwin Script",
+    "Icon": "preferences-system-windows-effect-presentwindows",
+    "Id": "PoloniumJs",
+    "License": "MIT",
+    "Name": "PoloniumJs",
+    "Version": "1.0"
+  },
+  "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+  "X-KDE-PluginKeyword": "PoloniumJs",
+  "X-Plasma-API": "javascript",
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-MainScript": "code/main.js"
 }
