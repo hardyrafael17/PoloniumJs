@@ -1,31 +1,32 @@
-NAME = $(shell npm pkg get name | tr -d '"')
-VERSION = "1.1.0"
+NAME =PoloniumJs
+VERSION =1.1.0
 
-PKGFILE = $(NAME).kwinscript
-PKGDIR = pkg
+all: install 
 
-all: build install cleanall
-
-run:
-
-install: $(PKGFILE)
+install:
 	kpackagetool6 -t KWin/Script -s $(NAME) \
 		&& kpackagetool6 -t KWin/Script -u . \
 		|| kpackagetool6 -t KWin/Script -i . 
 
-clean: $(PKGDIR)
-	rm -r $(PKGDIR)
-
-cleanpkg: $(PKGFILE)
-	rm $(PKGFILE)
-
-cleanall: clean cleanpkg
+# start: stop
+# 	dbus-send --session --dest=org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript string:'' string:'$(NAME)'
 
 start: stop
-	dbus-send --session --dest=org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript string:'' string:'$(NAME)'
+	kwriteconfig6 --file kwinrc --group Plugins --key $(NAME)Enabled true
+	qdbus org.kde.KWin /KWin reconfigure
 
-stop:
+stop: 
+	kwriteconfig6 --file kwinrc --group Plugins --key $(NAME)Enabled false
+	qdbus org.kde.KWin /KWin reconfigure
+
+test: install
+	kwriteconfig6 --file kwinrc --group Plugins --key $(NAME)Enabled false && qdbus org.kde.KWin /KWin reconfigure && kwriteconfig6 --file kwinrc --group Plugins --key $(NAME)Enabled true && qdbus org.kde.KWin /KWin reconfigure
+
+stopKwinScript:
 	dbus-send --session --dest=org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript string:'$(NAME)'
+
+startKwinScript:
+	dbus-send --session --dest=org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript string:'$(NAME)'
 
 # lint:
 # 	npx eslint "src/**"

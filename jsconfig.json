@@ -5,12 +5,12 @@
       "content/code/*": ["./*"],
       // "components/*": ["./components/*"]
     },
-    "moduleResolution": "node",
+    // "moduleResolution": "node",
     "checkJs": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "strictNullChecks": true,
-    "resolveJsonModule": true
+    // "target": "ESNext",
+    // "module": "ESNext",
+    // "strictNullChecks": true,
+    // "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "docs", "thinking"]
+  // "exclude": ["docs", "thinking"]
 }
