@@ -1,17 +1,15 @@
 NAME =PoloniumJs
 VERSION =1.1.0
 
-all: install 
+all: stop install start
 
-install:
+install: stop
 	kpackagetool6 -t KWin/Script -s $(NAME) \
 		&& kpackagetool6 -t KWin/Script -u . \
 		|| kpackagetool6 -t KWin/Script -i . 
 
-# start: stop
-# 	dbus-send --session --dest=org.kde.KWin /Scripting org.kde.kwin.Scripting.loadScript string:'' string:'$(NAME)'
-
 start: stop
+	sleep 0.2 
 	kwriteconfig6 --file kwinrc --group Plugins --key $(NAME)Enabled true
 	qdbus org.kde.KWin /KWin reconfigure
 
