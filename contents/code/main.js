@@ -17,7 +17,25 @@ function logObjectKeys (obj) {
  * @param {Window} _window
  */
 function goToDesktop (KWin, _window) {
-  // KWin.workspace.slotSwitchDesktop(window)
+}
+
+/**
+ * Creates desktops and assigns a shortcuto to got o the newly created desktop TODO - read config
+ * @param {Workspace} workspace
+ * @param {function(string, string, string, function():void):boolean} registerShortcut
+ */
+function createDesktops (workspace, registerShortcut) {
+  console.log(workspace.desktops.length)
+  while (workspace.desktops.length < 9) {
+    const newlyCreatedDesktopIndex = workspace.desktops.length
+    workspace.createDesktop(newlyCreatedDesktopIndex, '')
+    registerShortcut(
+      `Go to Virtual Desktop ${newlyCreatedDesktopIndex}`,
+      `Go to Virtual Desktop ${newlyCreatedDesktopIndex}`,
+      `Meta+${newlyCreatedDesktopIndex}`, () => {
+        workspace.currentDesktop = workspace.desktops[newlyCreatedDesktopIndex]
+      })
+  }
 }
 
 /**
@@ -25,22 +43,41 @@ function goToDesktop (KWin, _window) {
   * @param {KWin} KWin
   */
 function main (KWin) {
+  const isTilingModeEnabled = false
+  const tilingMode = 'Half'
   const workspace = KWin.workspace
   const registerShortcut = KWin.registerShortcut
 
+  createDesktops(workspace, registerShortcut)
+
   // define all variables
-  const lastActiveDesktop = KWin.workspace.currentDesktop
+  let lastActiveDesktop = KWin.workspace.currentDesktop
 
   // Register all shortcuts
-  registerShortcut('Return to Last Active Desktop', 'What is this', 'Meta+Esc', () => {
+  const shortcutOne = registerShortcut('Return to Last Active Desktop', 'Go To Last Active Virtual Deasktop', 'Meta+Esc', () => {
     console.log('Should Return to Last Active Desktop')
-    logObjectKeys(lastActiveDesktop)
+    workspace.currentDesktop = lastActiveDesktop
   })
+  const shortcutTwo = registerShortcut('Log PoloniumJs Info', 'Debugin PoloniumJs Info', 'Meta+]', () => {
+    console.log('Debug ----->>>>>>')
+    const newTile = new Tile()
+    // workspace.screens.forEach(screen => {
+    //   workspace.tilingForScreen(screen)
+    // })
+    // each activity of this Vitual Desktop
+    workspace.stackingOrder.forEach((window, index) => {
+      if (window.resourceName !== 'plasmashell') {
+        console.log(logObjectKeys(window.tile))
+      }
+    })
+    console.log('Debug <<<<<------')
+  })
+  console.log(shortcutOne, shortcutTwo)
 
   // Regiter all events callbacks
 
   workspace.windowAdded.connect((_window) => {
-    logObjectKeys(_window)
+    // logObjectKeys(_window)
   })
 
   workspace.windowRemoved.connect((_window) => {
@@ -55,7 +92,7 @@ function main (KWin) {
    * Fired whenever a virtual desktop is added or removed.
    */
   workspace.desktopsChanged.connect((_window) => {
-    console.log('event desktopsChanged')
+    console.log('event desktopsChanged ---------------->')
   })
 
   /**
@@ -119,9 +156,8 @@ function main (KWin) {
     console.log('event activitiesChanged')
   })
 
-  workspace.currentDesktopChanged.connect((_window) => {
-    console.log(_window.id)
-    console.log('event currentDesktopChanged')
+  workspace.currentDesktopChanged.connect((virtualDesktop) => {
+    lastActiveDesktop = virtualDesktop
   })
 
   /**

@@ -1,0 +1,130 @@
+ glStrictBindingChanged: function() { [native code] }
+ glStrictBindingFollowsDriverChanged: function() { [native code] }
+ glPreferBufferSwapChanged: function() { [native code] }
+ glPlatformInterfaceChanged: function() { [native code] }
+ windowsBlockCompositingChanged: function() { [native code] }
+ animationSpeedChanged: function() { [native code] }
+ configChanged: function() { [native code] }
+ allowTearingChanged: function() { [native code] }
+ undefined
+ Debug <<<<<------
+ Debug ----->>>>>>
+ objectName:
+ focusPolicy: 0
+ xwaylandCrashPolicy: 1
+ xwaylandMaxCrashCount: 3
+ nextFocusPrefersMouse: false
+ clickRaise: true
+ autoRaise: false
+ autoRaiseInterval: 0
+ delayFocusInterval: 0
+ shadeHover: false
+ shadeHoverInterval: 250
+ separateScreenFocus: false
+ activeMouseScreen: true
+ placement: 5
+ activationDesktopPolicy: 0
+ focusPolicyIsReasonable: true
+ borderSnapZone: 10
+ windowSnapZone: 10
+ centerSnapZone: 0
+ snapOnlyWhenOverlapping: false
+ rollOverDesktops: false
+ focusStealingPreventionLevel: 1
+ operationTitlebarDblClick: 5000
+ operationMaxButtonLeftClick: 5000
+ operationMaxButtonMiddleClick: 5015
+ operationMaxButtonRightClick: 5014
+ commandActiveTitlebar1: 0
+ commandActiveTitlebar2: 28
+ commandActiveTitlebar3: 2
+ commandInactiveTitlebar1: 4
+ commandInactiveTitlebar2: 28
+ commandInactiveTitlebar3: 2
+ commandWindow1: 7
+ commandWindow2: 8
+ commandWindow3: 8
+ commandWindowWheel: 28
+ commandAll1: 10
+ commandAll2: 3
+ commandAll3: 14
+ keyCmdAllModKey: 16777250
+ condensedTitle: false
+ electricBorderMaximize: true
+ electricBorderTiling: true
+ electricBorderCornerRatio: 0.25
+ borderlessMaximizedWindows: false
+ killPingTimeout: 5000
+ hideUtilityWindowsForInactive: true
+ compositingMode: 1
+ useCompositing: true
+ hiddenPreviews: 1
+ glSmoothScale: 2
+ glStrictBinding: true
+ glStrictBindingFollowsDriver: true
+ glPreferBufferSwap: 97
+ glPlatformInterface: 2
+ windowsBlockCompositing: true
+ allowTearing: true
+ objectNameChanged: function() { [native code] }
+ focusPolicyChanged: function() { [native code] }
+ focusPolicyIsResonableChanged: function() { [native code] }
+ xwaylandCrashPolicyChanged: function() { [native code] }
+ xwaylandMaxCrashCountChanged: function() { [native code] }
+ xwaylandEavesdropsChanged: function() { [native code] }
+ nextFocusPrefersMouseChanged: function() { [native code] }
+ clickRaiseChanged: function() { [native code] }
+ autoRaiseChanged: function() { [native code] }
+ autoRaiseIntervalChanged: function() { [native code] }
+ delayFocusIntervalChanged: function() { [native code] }
+ shadeHoverChanged: function() { [native code] }
+ shadeHoverIntervalChanged: function() { [native code] }
+ separateScreenFocusChanged: function() { [native code] }
+ activeMouseScreenChanged: function() { [native code] }
+ placementChanged: function() { [native code] }
+ activationDesktopPolicyChanged: function() { [native code] }
+ borderSnapZoneChanged: function() { [native code] }
+ windowSnapZoneChanged: function() { [native code] }
+ centerSnapZoneChanged: function() { [native code] }
+ snapOnlyWhenOverlappingChanged: function() { [native code] }
+ rollOverDesktopsChanged: function() { [native code] }
+ focusStealingPreventionLevelChanged: function() { [native code] }
+ operationTitlebarDblClickChanged: function() { [native code] }
+ operationMaxButtonLeftClickChanged: function() { [native code] }
+ operationMaxButtonRightClickChanged: function() { [native code] }
+ operationMaxButtonMiddleClickChanged: function() { [native code] }
+ commandActiveTitlebar1Changed: function() { [native code] }
+ commandActiveTitlebar2Changed: function() { [native code] }
+ commandActiveTitlebar3Changed: function() { [native code] }
+ commandInactiveTitlebar1Changed: function() { [native code] }
+ commandInactiveTitlebar2Changed: function() { [native code] }
+ commandInactiveTitlebar3Changed: function() { [native code] }
+ commandWindow1Changed: function() { [native code] }
+ commandWindow2Changed: function() { [native code] }
+ commandWindow3Changed: function() { [native code] }
+ commandWindowWheelChanged: function() { [native code] }
+ commandAll1Changed: function() { [native code] }
+ commandAll2Changed: function() { [native code] }
+ commandAll3Changed: function() { [native code] }
+ keyCmdAllModKeyChanged: function() { [native code] }
+ condensedTitleChanged: function() { [native code] }
+ electricBorderMaximizeChanged: function() { [native code] }
+ electricBorderTilingChanged: function() { [native code] }
+ electricBorderCornerRatioChanged: function() { [native code] }
+ borderlessMaximizedWindowsChanged: function() { [native code] }
+ killPingTimeoutChanged: function() { [native code] }
+ hideUtilityWindowsForInactiveChanged: function() { [native code] }
+ compositingModeChanged: function() { [native code] }
+ useCompositingChanged: function() { [native code] }
+ hiddenPreviewsChanged: function() { [native code] }
+ glSmoothScaleChanged: function() { [native code] }
+ glStrictBindingChanged: function() { [native code] }
+ glStrictBindingFollowsDriverChanged: function() { [native code] }
+ glPreferBufferSwapChanged: function() { [native code] }
+ glPlatformInterfaceChanged: function() { [native code] }
+ windowsBlockCompositingChanged: function() { [native code] }
+ animationSpeedChanged: function() { [native code] }
+ configChanged: function() { [native code] }
+ allowTearingChanged: function() { [native code] }
+ undefined
+ Debug <<<<<------

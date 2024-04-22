@@ -7,6 +7,7 @@ install: stop
 	kpackagetool6 -t KWin/Script -s $(NAME) \
 		&& kpackagetool6 -t KWin/Script -u . \
 		|| kpackagetool6 -t KWin/Script -i . 
+		qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.cleanUp
 
 start: stop
 	sleep 0.2 
